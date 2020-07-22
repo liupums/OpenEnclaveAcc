@@ -24,16 +24,18 @@ Based on the [doc](https://github.com/openenclave/openenclave/blob/master/docs/G
 3. Downlaod and unzip [PSW](http://registrationcenter-download.intel.com/akdlm/irc_nas/16464/Intel%20SGX%20PSW%20for%20Windows%20v2.7.100.2.exe)
       For example 
       E:\sgx\Intel SGX PSW for Windows v2.7.100.2\PSW_EXE_RS2_and_before\Intel(R)_SGX_Windows_x64_PSW_2.7.100.2.exe"
-4. Download and up [DCAP]()  
+4. Download and unzipp [DCAP]()  
       For example
       E:\sgx\Intel SGX DCAP for Windows v1.7.100.2
 
 5. Follow the [doc](https://github.com/openenclave/openenclave/blob/master/samples/README_Windows.md)
-      5.1 Install the oe_prereqs
+
+       5.1 Install the oe_prereqs
          https://www.nuget.org/packages/open-enclave/
          nuget.exe install open-enclave -Source e:\openenclave_nuget -OutputDirectory e:\oe_prereqs -ExcludeVersion
          nuget.exe install EnclaveCommonAPI -Source e:\openenclave_nuget -OutputDirectory e:\oe_prereqs -ExcludeVersion
          nuget.exe install DCAP_Components -Source e:\openenclave_nuget -OutputDirectory e:\oe_prereqs -ExcludeVersion
+         
        5.2 set CMAKE_PREFIX_PATH=e:\openenclave\lib\openenclave\cmake
        5.3 Hello world
           E:\oe\openenclave\share\openenclave\samples\helloworld\release>cmake -DCMAKE_BUILD_TYPE=Release .. -G Ninja -DNUGET_PACKAGE_PATH=E:\oe_prereqs 
