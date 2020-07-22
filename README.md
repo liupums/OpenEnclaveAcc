@@ -29,19 +29,19 @@ Based on the [doc](https://github.com/openenclave/openenclave/blob/master/docs/G
       E:\sgx\Intel SGX DCAP for Windows v1.7.100.2
 
 5. Follow the [doc](https://github.com/openenclave/openenclave/blob/master/samples/README_Windows.md)
-   5.1 Install the oe_prereqs
-      https://www.nuget.org/packages/open-enclave/
-      nuget.exe install open-enclave -Source e:\openenclave_nuget -OutputDirectory e:\oe_prereqs -ExcludeVersion
-      nuget.exe install EnclaveCommonAPI -Source e:\openenclave_nuget -OutputDirectory e:\oe_prereqs -ExcludeVersion
-      nuget.exe install DCAP_Components -Source e:\openenclave_nuget -OutputDirectory e:\oe_prereqs -ExcludeVersion
-    5.2 set CMAKE_PREFIX_PATH=e:\openenclave\lib\openenclave\cmake
-    5.3 Hello world
-       E:\oe\openenclave\share\openenclave\samples\helloworld\release>cmake -DCMAKE_BUILD_TYPE=Release .. -G Ninja -DNUGET_PACKAGE_PATH=E:\oe_prereqs 
-       E:\oe\openenclave\share\openenclave\samples\helloworld\release>ninja
-       E:\oe\openenclave\share\openenclave\samples\helloworld\release>ninja run
-          [1/1] cmd.exe /C "cd /D E:\oe\openenclave\share\ope.../samples/helloworld/release/enclave/enclave.signed"
-          Hello world from the enclave
-          Enclave called into host to print: Hello World!
+      5.1 Install the oe_prereqs
+         https://www.nuget.org/packages/open-enclave/
+         nuget.exe install open-enclave -Source e:\openenclave_nuget -OutputDirectory e:\oe_prereqs -ExcludeVersion
+         nuget.exe install EnclaveCommonAPI -Source e:\openenclave_nuget -OutputDirectory e:\oe_prereqs -ExcludeVersion
+         nuget.exe install DCAP_Components -Source e:\openenclave_nuget -OutputDirectory e:\oe_prereqs -ExcludeVersion
+       5.2 set CMAKE_PREFIX_PATH=e:\openenclave\lib\openenclave\cmake
+       5.3 Hello world
+          E:\oe\openenclave\share\openenclave\samples\helloworld\release>cmake -DCMAKE_BUILD_TYPE=Release .. -G Ninja -DNUGET_PACKAGE_PATH=E:\oe_prereqs 
+          E:\oe\openenclave\share\openenclave\samples\helloworld\release>ninja
+          E:\oe\openenclave\share\openenclave\samples\helloworld\release>ninja run
+             [1/1] cmd.exe /C "cd /D E:\oe\openenclave\share\ope.../samples/helloworld/release/enclave/enclave.signed"
+             Hello world from the enclave
+             Enclave called into host to print: Hello World!
 ## Test on ACC VM
     C:\Users\puliu\openenclave\bin>oesgx
     CPU supports SGX_FLC:Flexible Launch Control
